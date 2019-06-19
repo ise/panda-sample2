@@ -1,8 +1,6 @@
 PATH=/usr/lib/panda/bin:/usr/lib/panda/sbin:$PATH
 export LD_LIBRARY_PATH=/usr/lib/panda/
 PATH=/usr/local/bin:/usr/local/sbin:$PATH
-PATH=/tmp/opt/bin://tmp/opt/sbin:/usr/local/bin:/usr/local/sbin:$PATH
-LD_LIBRARY_PATH=/tmp/opt//lib
 LDNAME=test1
 
 if [ "x$LDNAME" = "x" ]; then
