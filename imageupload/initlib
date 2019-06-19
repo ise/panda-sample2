@@ -56,7 +56,7 @@ case "$1" in
         #valgrind glserver -api -auth file:///`pwd`/passwd -screen $SCREENDIR -record $RECORDDIR >> "$GLSERVER_LOG" 2>&1 &
         echo $! > "$GLSERVER_PID"
         echo "."
-sleep 36000
+        sleep 36000
         ;;
     stop)
         echo "stop"
