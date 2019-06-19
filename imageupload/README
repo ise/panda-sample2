@@ -1,0 +1,19 @@
+# BLOBのアップロードとダウンロードを試すプログラム
+
+cobol/demo.png をBLOBIMPORTしてクライアントに表示する。
+クライアントからアップロードされた画像(ファイル)をcobol/uploaded.pngにBLOBEXPORTする。
+
+## 準備
+
+$ createdb pandatest
+
+## 起動
+
+$ make
+$ ./init start
+
+## 終了
+
+$ ./init stop
+$ ./init clean
+$ make clean

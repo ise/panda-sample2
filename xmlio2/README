@@ -1,0 +1,32 @@
+# XMLIO2テストプログラム
+
+POSTメソッドで入力されたxmlをそのまま返すAPI
+
+## 動作方法
+
+## 準備
+
+実行するUnixユーザと同じDBユーザを作成し、pandatestというDBを作成しておく。
+
+$ cd msgarray
+$ sudo -u postgres createuser -d mihara
+$ createdb pandatest
+$ monsetup -dir direcotry
+
+## 起動
+
+$ ./init start
+
+## 終了
+
+$ ./init stop
+$ ./init clean
+
+## POST
+
+http://localhost:8000/test1/test1
+
+以下のコマンドでリクエストを発行できる。
+
+% ruby post_xml.rb
+% ruby post_json.rb
