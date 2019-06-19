@@ -23,28 +23,34 @@ SPA領域は各LDで異なるため、LD変更時に引き継がれない。
 
 ## 準備
 
+```
 日レセ停止
-  $ sudo service jma-receipt stop
+$ sudo service jma-receipt stop
 
 ビルド
-  $ make
+$ make
 
 PostgreSQLユーザ作成(ident認証するためログインユーザと同名)
-  $ sudo -u postgres createuser -d $USER
+$ sudo -u postgres createuser -d $USER
 
 DB作成(panda用スキーマ設定がされたDBがある場合は以降スキップ可能)
-  $ createdb pandatest
+$ createdb pandatest
 
 panda用スキーマ設定
-  $ /usr/lib/panda/bin/monsetup -dir directory
+$ /usr/lib/panda/bin/monsetup -dir directory
+```
 
 ## サーバ起動
 
+```
 $ ./init start
+```
 
 ## クライアント起動
 
+```
 $ glclient2
+```
 
 サーバ: http://localhost:8000/rpc/
 ユーザ: sample
@@ -53,6 +59,8 @@ SSL設定: なし
 
 ## サーバ終了
 
+```
 $ ./init stop
 $ ./init clean
 $ make clean
+```
