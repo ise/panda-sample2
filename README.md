@@ -1,3 +1,31 @@
+```bash
+
+# 環境構築
+$ vagrant up
+$ vagrant ssh
+
+# dbaccessのサンプル
+$ cd panda-sample2
+$ cd dbaccess
+$ make
+$ sudo -u postgres createuser -d $USER
+$ sudo service jma-receipt stop
+$ createdb pandatest
+$ psql pandatest < dbtest.sql
+$ /usr/lib/panda/bin/monsetup -dir directory
+$ ./init start
+
+# Macローカルのmonsiajから接続
+サーバ：http://localhost:28000/rpc/
+ユーザ：sample
+パスワード：sample
+
+```
+
+-----
+
+以下、元のREADME
+
 # panda-sample2
 
 日医標準レセプトソフトのオンプレ版のミドルウェアmontsuqiのサンプルプログラム
